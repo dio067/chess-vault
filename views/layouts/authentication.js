@@ -9,12 +9,16 @@ export default (content) => {
 			href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css"
 			rel="stylesheet"
 		/>
+		<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.4/css/bulma.min.css">
 		<link rel="stylesheet" href="./css/main.css" />
 		<title>Chess Vault</title>
-	</head>
+	</head>		
 	<body>
+	<main>
 	${content}
+	</main>
 	</body>
+</div>
 </html>
 
 `;

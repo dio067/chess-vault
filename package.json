@@ -1,25 +1,29 @@
 {
-	"name": "chess-vault",
-	"version": "1.0.0",
-	"main": "app.js",
-	"scripts": {
-		"test": "echo \"Error: no test specified\" && exit 1",
-		"dev": "nodemon app.js"
-	},
-	"repository": {
-		"type": "git",
-		"url": "github.com/dio067/chess-vault"
-	},
-	"keywords": [],
-	"author": "",
-	"license": "ISC",
-	"description": "",
-	"type": "module",
-	"dependencies": {
-		"check": "^1.0.0",
-		"cookie-session": "^2.1.0",
-		"express": "^5.1.0",
-		"express-validator": "^7.2.1",
-		"nodemon": "^3.1.10"
-	}
+  "name": "chess-vault",
+  "version": "1.0.0",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "dev": "nodemon app.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "github.com/dio067/chess-vault"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "description": "",
+  "type": "module",
+  "dependencies": {
+    "check": "^1.0.0",
+    "cookie-session": "^2.1.0",
+    "crypto": "^1.0.1",
+    "express": "^5.1.0",
+    "express-session": "^1.18.2",
+    "express-validator": "^7.2.1",
+    "fs": "^0.0.1-security",
+    "middlewares": "^0.1.1",
+    "nodemon": "^3.1.10"
+  }
 }

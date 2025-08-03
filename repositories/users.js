@@ -1,33 +1,34 @@
-import fs from "fs";
-import crypto from "crypto";
-import util from "util";
-import generalRepo from "./repo.js";
+import fs from 'fs';
+import crypto from 'crypto';
+import util from 'util';
+import Repository from './repo.js';
 
 const scrypt = util.promisify(crypto.scrypt);
 
-class User extends generalRepo {
-	async comparePassoword(saved, supplied) {
-		const [hashed, salt] = saved.split(".");
+class UsersRepository extends Repository {
+  async comparePasswords(saved, supplied) {
+    const [hashed, salt] = saved.split('.');
+    const hashedSuppliedBuf = await scrypt(supplied, salt, 64);
 
-		const hashedSupplied = scrypt(supplied, salt, 64);
+    return hashed === hashedSuppliedBuf.toString('hex');
+  }
+  async create(attrs) {
+    attrs.id = this.randomId();
 
-		return hashedSupplied.toString("hex") === hashed;
-	}
-	async create(attrs) {
-		attrs.id = this.randomId();
+    const salt = crypto.randomBytes(8).toString('hex');
+    const buf = await scrypt(attrs.password, salt, 64);
 
-		const salt = crypto.randomBytes(8).toString("hex");
+    const records = await this.getAll();
+    const record = {
+      ...attrs,
+      password: `${buf.toString('hex')}.${salt}`,
+    };
+    records.push(record);
 
-		const buff = await scrypt(attrs.password, salt, 64);
+    await this.writeAll(records);
 
-		const records = await this.getAll();
-		const record = { ...attrs, password: `${buff.toString("hex")}.${salt}` };
-		records.push(record);
-
-		await this.writeAll(records);
-
-		return record;
-	}
+    return record;
+  }
 }
 
-export default new User("users.json");
+export default new UsersRepository('users.json');
