@@ -43,13 +43,13 @@ export default ({ errors }) => {
 				</div>
 				<div class="main-cards">
 					<div class="card">
-						<img src="./card1.jpeg" alt="Card 1" />
+						<img src="./images/card1.jpeg" alt="Card 1" />
 					</div>
 					<div class="card">
-						<img src="./card2.jpeg" alt="Card 2" />
+						<img src="./images/card2.jpeg" alt="Card 2" />
 					</div>
 					<div class="card">
-						<img src="./card3.jpeg" alt="Card 3" />
+						<img src="./images/card3.jpeg" alt="Card 3" />
 					</div>
 				</div>
 			</main>
