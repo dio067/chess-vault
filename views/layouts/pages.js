@@ -18,6 +18,6 @@ export default (content) => {
 	<body>
     ${content}
 	</body>
-	<script src="../js/script.js"></script>
+	<script src="./js/templateAnimation.js"></script>
 </html>`;
 };
