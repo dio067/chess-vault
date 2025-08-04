@@ -26,7 +26,7 @@ router.post(
     const user = await usersRepo.create({ email, password });
     req.session.userId = user.id;
 
-    res.redirect('/games');
+    res.redirect('/home');
   }
 );
 
@@ -50,7 +50,7 @@ router.post(
 
     req.session.userId = user.id;
 
-    res.redirect('/games');
+    res.redirect('/home');
   }
 );
 export default router;
