@@ -1,8 +1,6 @@
 import layout from '../layouts/pages.js';
 export default ({ errors }) => {
-  return layout(`
-      <form method="post">
-		<div class="grid-container">
+  return layout(`<div class="grid-container">
 			<header class="header">
 				<div class="menu-icon" onclick="openSidebar()">
 					<span class="material-symbols-outlined"> menu </span>
@@ -26,15 +24,24 @@ export default ({ errors }) => {
 					</div>
 				</div>
 				<ul class="sidebar-list">
-					<li class="sidebar-list-item">
-						<span class="material-symbols-outlined"> chess_pawn </span>PLAY
-					</li>
-					<li class="sidebar-list-item">
-						<span class="material-symbols-outlined"> troubleshoot </span>ANALYZE
-					</li>
-					<li class="sidebar-list-item">
-						<span class="material-symbols-outlined"> database </span>DATABASE
-					</li>
+					<a href="/play">
+						<li class="sidebar-list-item">
+							<span class="material-symbols-outlined"> chess_pawn </span>PLAY
+						</li>
+					</a>
+
+					<a href="/analyze">
+						<li class="sidebar-list-item">
+							<span class="material-symbols-outlined"> troubleshoot </span
+							>ANALYZE
+						</li>
+					</a>
+
+					<a href="/database">
+						<li class="sidebar-list-item">
+							<span class="material-symbols-outlined"> database </span>DATABASE
+						</li></a
+					>
 				</ul>
 			</aside>
 			<main class="main-container">
@@ -43,16 +50,18 @@ export default ({ errors }) => {
 				</div>
 				<div class="main-cards">
 					<div class="card">
-						<img src="./images/card1.jpeg" alt="Card 1" />
+						<span class="material-symbols-outlined"> chess_rook </span>
+						<h2>ANALYZE YOUR GAMES WITH STOCKFISH</h2>
 					</div>
 					<div class="card">
-						<img src="./images/card2.jpeg" alt="Card 2" />
+						<span class="material-symbols-outlined"> chess_bishop </span>
+						<h2>PLAY AGAINST STOCLFISH</h2>
 					</div>
 					<div class="card">
-						<img src="./images/card3.jpeg" alt="Card 3" />
+						<span class="material-symbols-outlined"> chess_king </span>
+						<h2>SAVE YOUR FAVOURITE GAMES</h2>
 					</div>
 				</div>
 			</main>
-		</div>
-        <form></form>`);
+		</div>`);
 };
