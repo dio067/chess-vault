@@ -3,7 +3,7 @@ const main = document.querySelector('.main-container');
 const menuIcon = document.querySelector('.menu-icon');
 const header = document.querySelector('header');
 
-let opendSidebar = false;
+let sidebarOpened = false;
 
 menuIcon.addEventListener('click', () => {
   if (sidebarOpened) {
