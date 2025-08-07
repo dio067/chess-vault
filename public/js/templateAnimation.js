@@ -1,6 +1,17 @@
+const sidebar = document.querySelector('.sidebar');
+const main = document.querySelector('.main-container');
+const menuIcon = document.querySelector('.menu-icon');
+const header = document.querySelector('header');
+
 let opendSidebar = false;
 
-const sidebar = document.querySelector('.sidebar');
+menuIcon.addEventListener('click', () => {
+  if (sidebarOpened) {
+    closeSidebar();
+  } else {
+    openSidebar();
+  }
+});
 
 function openSidebar() {
   if (!sidebarOpened) {
