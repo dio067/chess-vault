@@ -5,12 +5,22 @@ body {
   color: #ffffff;
   font-family: 'Roboto', sans-serif;
 }
-
 .material-symbols-outlined {
   vertical-align: middle;
   line-height: 1px;
 }
 
+.header-right .material-symbols-outlined {
+  font-size: 30px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.header-right .material-symbols-outlined:hover {
+  font-size: 40px;
+  box-shadow: 0 6px 7px rgba(0, 0, 0, 0.35);
+}
+/* add hover right header */
 .grid-container {
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
@@ -22,8 +32,18 @@ body {
 }
 
 .menu-icon {
+  font-size: 30px;
   display: flex;
+  cursor: pointer;
+  transition: all 0.3s ease;
 }
+
+.menu-icon:hover {
+  font-size: 40px;
+  transform: translateY(-5px);
+  box-shadow: 0 6px 7px rgba(0, 0, 0, 0.35);
+}
+/* add hover menu icon */
 
 .header {
   position: relative;
