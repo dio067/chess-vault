@@ -1,7 +1,7 @@
 import layout from '../layouts/pages.js';
 export default ({ errors }) => {
-  return layout(`<form method:"post">
-	<div class="grid-container">
+  return layout(`
+		<div class="grid-container">
 			<header class="header">
 				<div class="header-left">
 					<div class="menu-icon">
@@ -63,5 +63,5 @@ export default ({ errors }) => {
 				</div>
 			</main>
 		</div>
-		</form>`);
+	`);
 };
