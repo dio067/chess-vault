@@ -19,7 +19,7 @@ export default ({ errors }) => {
 				<div class="sidebar-title">
 					<div class="sidebar-signture">
 						<span class="material-symbols-outlined"> chess_knight </span>Menu
-						<span class="material-symbols-outlined" onclick="closeSidebar()"
+						<span class="material-symbols-outlined close-icon" onclick="closeSidebar()"
 							>close</span
 						>
 					</div>
