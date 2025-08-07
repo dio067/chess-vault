@@ -21,3 +21,13 @@ function closeSidebar() {
     sidebarOpened = false;
   }
 }
+
+function listenerOutsideSidebar(e) {
+  if (
+    !sidebar.contains(e.target) &&
+    !menuIcon.contains(e.target) &&
+    !header.contains(e.target)
+  ) {
+    closeSidebar();
+  }
+}
