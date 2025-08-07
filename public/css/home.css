@@ -129,6 +129,16 @@ a span {
   z-index: 12 !important;
 }
 
+.close-icon {
+  cursor: pointer;
+  font-size: 20px;
+  transition: all 0.3s ease;
+}
+
+.close-icon:hover {
+  transform: translateY(-5px);
+}
+
 .main-container {
   position: relative;
   grid-area: main;
