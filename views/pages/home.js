@@ -12,14 +12,20 @@ export default ({ errors }) => {
 					<span class="material-symbols-outlined"> brightness_empty </span>
 					<span class="material-symbols-outlined"> notifications </span>
 					<span class="material-symbols-outlined"> mail </span>
-					<span class="material-symbols-outlined"> account_circle </span>
+					<a href="/profile">
+						<span class="material-symbols-outlined" id="profile-photo">
+							account_circle
+						</span>
+					</a>
 				</div>
 			</header>
 			<aside class="sidebar sidebar-hidden" id="sidebar">
 				<div class="sidebar-title">
 					<div class="sidebar-signture">
 						<span class="material-symbols-outlined"> chess_knight </span>Menu
-						<span class="material-symbols-outlined close-icon" onclick="closeSidebar()"
+						<span
+							class="material-symbols-outlined close-icon"
+							onclick="closeSidebar()"
 							>close</span
 						>
 					</div>
