@@ -20,5 +20,6 @@ export default (content) => {
 	${content}
 	</body>
 	<script src="./js/templateAnimation.js"></script>
+	<script src="./headerAnimation.js"></script>
 </html>`;
 };
