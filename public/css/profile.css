@@ -12,7 +12,7 @@ body {
 .grid-container {
   display: grid;
   grid-template-columns: 1fr 1fr;
-  grid-template-rows: 0.2fr 3fr;
+  grid-template-rows: 90px 1fr;
   grid-template-areas:
     'header header'
     'main main';
@@ -67,7 +67,101 @@ a:visited {
   outline: none !important;
   border: none !important;
 }
-.main-container {
-  display: flex;
+
+.main-grid {
   grid-area: main;
+  display: grid;
+  grid-template-columns: 0.2fr 1fr 3fr;
+  grid-template-rows: 1fr;
+  grid-template-areas: 'left-main mid-main right-main';
+  height: 100%;
+  width: 100%;
+}
+
+.main-left {
+  grid-area: left-main;
+}
+
+.main-right {
+  grid-area: right-main;
+}
+
+.main-mid {
+  grid-area: mid-main;
+  padding: 0 36px 0 36px;
+}
+
+.main-mid img {
+  width: 70%;
+  height: 70%;
+  object-fit: contain;
+  border-radius: 200px;
+}
+
+.main-mid .profile-image {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 70px;
+}
+
+.username {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.username .material-symbols-outlined {
+  cursor: pointer;
+}
+
+.edit-profile {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  height: 40px;
+  border: 0.5px solid #fff;
+  border-radius: 10px;
+  background-color: rgb(67, 67, 67);
+  transition: all 0.3s ease;
+}
+
+.edit-profile:hover {
+  background-color: rgb(29, 29, 29);
+  transform: translateY(-5px);
+}
+.edit-profile h2 {
+  font-size: 20px;
+}
+
+.main-cards {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 20px;
+  padding: 0 36px 0 36px;
+}
+
+.card {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 40%;
+  border: 1px solid #fff;
+  height: 50%;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.card h2 {
+  font-size: 50px;
+}
+
+.card span {
+  font-size: 100px;
+}
+
+.card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 6px 0 7px rgba(0, 0, 0, 0.35);
 }
