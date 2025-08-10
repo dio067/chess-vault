@@ -1,4 +1,4 @@
-import layout from '../layouts/pages.js';
+import layout from '../layouts/home.js';
 export default ({ errors }) => {
   return layout(`
 		<div class="grid-container">

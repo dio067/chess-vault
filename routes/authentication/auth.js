@@ -7,23 +7,21 @@ import middlewares from '../middlewares.js';
 
 const router = express.Router();
 
-console.log('validators:', validators);
-console.log('middlewares:', middlewares);
-
 router.get('/signup', (req, res) => {
   res.send(signupTemplate({ req }));
 });
 router.post(
   '/signup',
   [
+    validators.requireUsername,
     validators.requireEmail,
     validators.requirePassword,
     validators.requirePasswordConfirmation,
   ],
   middlewares.handleErrors(signupTemplate),
   async (req, res) => {
-    const { email, password, passwordConfirmation } = req.body;
-    const user = await usersRepo.create({ email, password });
+    const { username, email, password, passwordConfirmation } = req.body;
+    const user = await usersRepo.create({ username, email, password });
     req.session.userId = user.id;
 
     res.redirect('/home');

@@ -1,11 +1,11 @@
 import fs from 'fs';
 import crypto from 'crypto';
 import util from 'util';
-import Repository from './repo.js';
+import generalRepo from './repo.js';
 
 const scrypt = util.promisify(crypto.scrypt);
 
-class UsersRepository extends Repository {
+class User extends generalRepo {
   async comparePasswords(saved, supplied) {
     const [hashed, salt] = saved.split('.');
     const hashedSuppliedBuf = await scrypt(supplied, salt, 64);
@@ -30,5 +30,4 @@ class UsersRepository extends Repository {
     return record;
   }
 }
-
-export default new UsersRepository('users.json');
+export default new User('users.json');

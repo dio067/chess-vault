@@ -1,7 +1,7 @@
-import layout from '../layouts/pages.js';
+import layout from '../layouts/profile.js';
 import helpers from '../helpers.js';
 
-export default ({ errors }) => {
+export default ({ errors, username }) => {
   return layout(`<form method="post">
 	<div class="grid-container">
 			<div class="header">
@@ -21,10 +21,10 @@ export default ({ errors }) => {
 				<main class="main-mid">
 					<a href="/profile/edit">
 						<div class="profile-image">
-							<img src="./card1.jpeg" alt="Change Profile Photo" />
+							<img src="./images/default-img.png" alt="Change Profile Photo" />
 						</div>
 						<div class="username">
-							<h1>@username</h1>
+							<h1>${username}</h1>
 						</div>
 
 						<div class="edit-profile">

@@ -3,8 +3,7 @@ import bodyParser from 'body-parser';
 import cookieSession from 'cookie-session';
 import session from 'express-session';
 import authRouter from './routes/authentication/auth.js';
-import homeRouter from './routes/pages/home.js';
-
+import pagesRouter from './routes/pages/pages.js';
 const app = express();
 
 app.use(express.static('public'));
@@ -25,7 +24,7 @@ app.use(
 );
 
 app.use(authRouter);
-app.use(homeRouter);
+app.use(pagesRouter);
 
 app.listen(4000, () => {
   console.log('Listening....');

@@ -7,6 +7,12 @@ export default ({ errors }) => {
 			<div class="signup-wrapper">
 				<h1>Sign Up</h1>
 				<div class="input-box">
+					<input type="username" placeholder="" required name="username"/>
+					<label>Username</label>
+					<i class="bx bxs-user"></i>
+					<p class="help is-danger">${helpers.getError(errors, 'username')}</p>
+				</div>
+				<div class="input-box">
 					<input type="email" placeholder="" required name="email"/>
 					<label>Email</label>
 					<i class="bx bxs-user"></i>

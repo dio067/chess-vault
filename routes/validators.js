@@ -2,6 +2,17 @@ import { check } from 'express-validator';
 import userRepo from '../repositories/users.js';
 
 export default {
+  requireUsername: check('username')
+    .trim()
+    .isLength({ max: 40 })
+    .withMessage('username is too long')
+    .custom(async (username) => {
+      const user = await userRepo.getOneBy({ username });
+
+      if (user) {
+        throw new Error('Username in use');
+      }
+    }),
   requireEmail: check('email')
     .trim()
     .normalizeEmail()
