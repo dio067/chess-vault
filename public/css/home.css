@@ -1,10 +1,19 @@
 body {
-  margin: 0;
   padding: 0;
-  background-color: #212020;
-  color: #ffffff;
-  font-family: 'Roboto', sans-serif;
+  margin: 0;
+  background: repeating-linear-gradient(
+    45deg,
+    #383839,
+    #1f2020 100px,
+    #151515 50px,
+    #000000 50px
+  );
+  background-size: 600% 600%;
+  animation: bgMove 40s linear infinite;
+  font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+  color: rgb(186, 185, 185);
 }
+
 .material-symbols-outlined {
   vertical-align: middle;
   line-height: 1px;
@@ -215,5 +224,14 @@ a span {
     grid-template-columns: 1fr;
     gap: 10px;
     margin-bottom: 0;
+  }
+}
+@keyframes bgMove {
+  0% {
+    background-position: 0 0;
+  }
+
+  100% {
+    background-position: 100% 100%;
   }
 }
