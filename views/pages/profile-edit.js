@@ -10,7 +10,7 @@ export default ({ username, email }) => {
 					</a>
 				</div>
 				<div class="header-right">
-					<a href="/profile">
+					<a href="/signout">
 						<span class="material-symbols-outlined"> logout </span> SIGN OUT
 					</a>
 				</div>
